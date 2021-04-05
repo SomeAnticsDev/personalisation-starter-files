@@ -1,0 +1,22 @@
+.b-productOptions {
+  button {
+    display: block;
+    width: 100%;
+    padding: 1em 2em;
+    font-size: var(--size-500, 1rem);
+  }
+  &__addToBasket {
+    background-color: var(--color-secondary, #3a7490);
+    border: 0.25rem solid var(--color-secondary, #3a7490);
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: bold;
+  }
+  &__wishlist {
+    background-color: transparent;
+    border: 0.25rem solid var(--color-secondary, #3a7490);
+    color: var(--color-text, #000);
+    border-radius: 0.5rem;
+    font-weight: bold;
+  }
+}

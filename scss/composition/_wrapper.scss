@@ -1,0 +1,10 @@
+.c-wrapper {
+  padding: 2rem 4rem;
+  &__margin {
+    margin: 2rem 0rem;
+  }
+  &--inner {
+    max-width: 65rem;
+    margin: 0 auto;
+  }
+}

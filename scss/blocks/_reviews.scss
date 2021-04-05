@@ -1,0 +1,18 @@
+.b-reviews {
+  &__singleReview {
+    max-width: 70ch;
+    margin: 0;
+    padding: 1rem 2rem;
+    background-color: var(--color-primary, #c0dae1);
+    border-radius: 0.5em;
+    &:nth-of-type(even) {
+      margin: 0 0 0 auto;
+    }
+    & + .b-reviews__singleReview {
+      margin-top: 1rem;
+    }
+  }
+  blockquote > p {
+    font-style: italic;
+  }
+}

@@ -1,0 +1,13 @@
+.b-socialMediaShare {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1em;
+  button {
+    font-size: var(--size-400, 0.8rem);
+    background-color: transparent;
+    border: 0.15rem solid var(--color-secondary, #3a7490);
+    color: var(--color-text, #000);
+    border-radius: 0.5rem;
+  }
+}

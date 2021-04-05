@@ -1,0 +1,10 @@
+.b-ratingsIndicator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__graphic {
+    display: inline;
+    max-height: 1.5rem;
+    padding: 0 0.5em 0 0;
+  }
+}

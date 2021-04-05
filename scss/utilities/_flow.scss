@@ -1,0 +1,11 @@
+.u-flow {
+  &--small > * + * {
+    margin-top: 0.5em;
+  }
+  &--medium > * + * {
+    margin-top: 1em;
+  }
+  &--large > * + * {
+    margin-top: 2em;
+  }
+}

@@ -1,0 +1,27 @@
+.b-navigationItem {
+  width: max-content;
+  margin-left: -0.5rem;
+  a {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: var(--color-text, #000);
+    text-decoration: none;
+    border: 0.2rem solid transparent;
+  }
+  a:hover {
+    border-color: var(--color-tertiary, #12252d);
+  }
+  a:focus {
+    border: 0.2rem solid var(--color-quaternary, #008cc6);
+    outline: none;
+  }
+  a:active {
+    border: 0.2rem solid var(--color-quaternary, #008cc6);
+    background-color: var(--color-quaternary, #008cc6);
+    color: white;
+  }
+  a[aria-current="page"] {
+    background-color: var(--color-secondary, #3a7490);
+    color: white;
+  }
+}

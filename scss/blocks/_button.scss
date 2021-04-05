@@ -1,0 +1,20 @@
+.b-button {
+  background-color: var(--color-secondary, #3a7490);
+  border: 0.25rem solid var(--color-secondary, #3a7490);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: 0.2rem solid var(--color-secondary, #3a7490);
+    outline-offset: 0.5rem;
+  }
+  &:active {
+    background-color: var(--color-quaternary, #008cc6);
+    color: white;
+  }
+}

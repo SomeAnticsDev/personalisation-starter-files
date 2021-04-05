@@ -1,0 +1,23 @@
+.b-hero {
+  height: 40vh;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  position: relative;
+  &__heading, &__text {
+    display: block;
+    padding: 1rem 2rem;
+    background-color: var(--color-text-alt, #fff);
+    color: var(--color-text, #000);
+    width: max-content;
+  }
+  &__heading {
+    margin: 0 auto auto 0;
+  }
+  &__text {
+    bottom: 1rem;
+    position: absolute;
+  }
+}

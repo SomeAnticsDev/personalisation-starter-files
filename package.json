@@ -1,0 +1,26 @@
+{
+  "name": "personalisation-starter-files",
+  "version": "1.0.0",
+  "description": "The base set of files that will allow us to begin to personalise a website to make it more accessible.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelamyman/personalisation-starter-files.git"
+  },
+  "author": "Joe Lamyman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joelamyman/personalisation-starter-files/issues"
+  },
+  "homepage": "https://github.com/joelamyman/personalisation-starter-files#readme",
+  "scripts": {
+    "start": "concurrently \"browser-sync start --server 'site' --watch\" \"sass --watch scss/critical.scss:site/css/critical.css\"",
+    "sass": "sass scss/critical.scss:site/css/critical.css"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "concurrently": "^6.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
+}

@@ -1,0 +1,38 @@
+.c-itemHolder {
+  grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "productImage title productOptions"
+                       "productImage ratings productOptions"
+                       "productImage price productOptions"
+                       "productImage overview productOptions";
+  &__image {
+    grid-area: productImage;
+    display: block;
+    height: 10rem;
+    width: 10rem;
+    max-height: 10rem;
+    margin: 0 auto;
+    background-color: var(--color-secondary, #3a7490);
+    padding: 3rem;
+    border-radius: 10%;
+  }
+  &__title {
+    grid-area: title;
+    font-size: var(--size-800, 1.953rem);
+  }
+  &__ratings {
+    grid-area: ratings;
+  }
+  &__price {
+    grid-area: price;
+  }
+  &__overview {
+    grid-area: overview;
+  }
+  &__options {
+    grid-area: productOptions;
+    margin-top: 1.953rem;
+  }
+}
