@@ -14,7 +14,7 @@ npm install
 To run the development environment, you can use the following script.
 
 ```bash
-npm run
+npm start
 ```
 
 To just build the Sass, you can use the following script.
