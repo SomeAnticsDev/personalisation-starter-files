@@ -1,49 +1,72 @@
-getStyling();
 
-function getStyling(){
+const personalisationOptions = document.querySelectorAll('.js-individualPersonalisation');
+
+document.querySelectorAll('.js-individualPersonalisation').forEach(item => {
+  item.addEventListener('click', e => {
+    addIndividualStyling(e.target);
+  })
+})
+
+const loadIndividualStyling = () => {
   for (let x=0; x<localStorage.length; x++){
-    const splitKey = localStorage.key(x).split('-');
-    if (splitKey[0]==="p"){
+    let splitKey = localStorage.key(x).split('-');
+    if (splitKey[0]==="pi"){
       const storedValue = localStorage.getItem(localStorage.key(x));
       let splitValue = storedValue.split('--');
-      changeStyling(splitValue[0], storedValue);
+      let recreatedSelector = '';
+      for (let y=1; y<splitKey.length-2; y++){
+        recreatedSelector+=`${splitKey[y]}`;
+        if (y!==splitKey.length-3){
+          recreatedSelector+='-';
+        }
+      }
+      addIndividualStyling('', recreatedSelector, storedValue);
     }
   }
 }
 
-function changeStyling(classGroup, className){
-  //store the body element and classes in variables
-  const bodyElement = document.querySelector('html');
-  const classes = bodyElement.classList;
+loadIndividualStyling();
 
-  //loop through and see if there's any other classes of the same group in use
-  for (let x=0; x<classes.length; x++){
-    //if there is, remove them
-    if (classes[x].includes(classGroup)){
-      bodyElement.classList.remove(classes[x]);
-      classes[x]="";
-    }
+function addIndividualStyling(selectedItem, targetElementSelector, storedClassToAdd) {
+  let elementToTarget, targetElement;
+  if (!targetElementSelector){
+    elementToTarget = selectedItem.closest('.c-atomicCustomisationMenu').dataset.personalisation;
+    targetElement = document.querySelector(`.${elementToTarget}`);
+  } else {
+    elementToTarget = targetElementSelector;
+    targetElement = document.querySelector(`.${elementToTarget}`);
   }
 
-  //add this new class
-  if (className!==""){
-    bodyElement.classList.add(className);
+  let classToAdd;
+  if (!storedClassToAdd) {
+    classToAdd = selectedItem.dataset.property;
+  } else {
+    classToAdd = storedClassToAdd;
+  }
+
+  const existingClasses = targetElement.classList;
+
+  
+  let personalisationCategory = classToAdd.split('-');
+
+  if ((!targetElementSelector) && (!storedClassToAdd)) {
+    personalisationCategory = personalisationCategory[0];
+  } else {
+    personalisationCategory = personalisationCategory[1];
+  }
+  existingClasses.forEach(item => {
+    if (item.includes(personalisationCategory)) {
+      targetElement.classList.remove(item);
+    }
+  })
+  if ((!targetElementSelector) && (!storedClassToAdd)) {
+    targetElement.classList.add(`u-${classToAdd}`);
+    saveIndividualStyling(elementToTarget, personalisationCategory, classToAdd);
+  } else {
+    targetElement.classList.add(`${classToAdd}`);
   }
 }
 
-const stylingButtons = document.querySelectorAll('.js-changeStyling');
-
-  for (let x=0; x<stylingButtons.length; x++) {
-    stylingButtons[x].addEventListener('click', function(){
-      const className = stylingButtons[x].dataset.property;
-      const splitProperty = className.split('-');
-      console.log("I work " + splitProperty[0]);
-      changeStyling(splitProperty[0], className);
-      //update storage
-      saveStyling(splitProperty[0], className);
-    });
-  }
-
-  function saveStyling(classGroup, className){
-    localStorage.setItem('p-' + classGroup, className);
-  }
+function saveIndividualStyling(elementSelector, classGroup, className){
+  localStorage.setItem('pi-' + elementSelector + '--' + classGroup, 'u-' + className);
+}

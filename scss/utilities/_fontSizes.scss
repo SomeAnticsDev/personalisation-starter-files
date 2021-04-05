@@ -2,18 +2,18 @@
   font-size: var(--size-800, 1.953rem);
 }
 
-.u-size-700 {
+.u-textSize--xlarge, .u-size-700 {
   font-size: var(--size-700, 1.563rem);
 }
 
-.u-size-600 {
+.u-textSize--large, .u-size-600 {
   font-size: var(--size-600, 1.25rem);
 }
 
-.u-size-500 {
+.u-textSize--medium, .u-size-500 {
   font-size: var(--size-500, 1rem);
 }
 
-.u-size-400 {
+.u-textSize--small, .u-size-400 {
   font-size: var(--size-400, 0.8rem);
 }

@@ -31,15 +31,14 @@
         <div class="c-itemHolder__ratings u-flow--small">
           <h2>Ratings</h2>
           <div class="b-ratingsIndicator">
-            <svg aria-hidden="true" fill="none" class="b-ratingsIndicator__graphic"
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 145">
+            <svg aria-hidden="true" fill="none" class="b-ratingsIndicator__graphic" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 696 145">
               <ellipse cx="64" cy="13.53" rx="61" ry="10.53" fill="#C48728" />
               <ellipse cx="64" cy="131.899" rx="61" ry="10.53" fill="#C48728" />
               <path fill="#C48728" d="M3 13.167h122v118.369H3z" />
               <path d="M27.69 5.179V140.25" stroke="#7C571C" stroke-dasharray="3 3" />
               <path d="M115.56 8.083v129.262" stroke="#7C571C" stroke-dasharray="3 3" />
-              <path d="M3 132V13C3 .5 125 .5 125 13v119c0 14.5-122 12.5-122 0z" stroke="#000"
-                stroke-width="5" />
+              <path d="M3 132V13C3 .5 125 .5 125 13v119c0 14.5-122 12.5-122 0z" stroke="#000" stroke-width="5" />
               <ellipse cx="348" cy="13.53" rx="61" ry="10.53" fill="#C48728" />
               <ellipse cx="348" cy="131.899" rx="61" ry="10.53" fill="#C48728" />
               <path fill="#C48728" d="M287 13.167h122v118.369H287z" />
@@ -73,20 +72,102 @@
             <p>5,748 ratings</p>
           </div>
         </div>
-        <div class="c-itemHolder__price u-flow--small">
+        <div class="c-itemHolderrice u-flow--small">
           <h2>Price</h2>
           <p class="u-size-700">£5.00</p>
           <p><strong>No returns</strong></p>
         </div>
         <div class="c-itemHolder__overview">
           <h2>Product overview</h2>
-          <ul>
-            <li>Point 1</li>
-            <li>Point 2</li>
-            <li>Point 3</li>
-            <li>Point 4</li>
-            <li>Point 5</li>
-          </ul>
+          <div class="u-position--relative">
+            <ul class="js-productOverviewInfo">
+              <li>Point 1</li>
+              <li>Point 2</li>
+              <li>Point 3</li>
+              <li>Point 4</li>
+              <li>Point 5</li>
+            </ul>
+            <!-- Container for the atomic/more granular personalisations -->
+            <div class="c-atomicCustomisationMenu" data-personalisation="js-productOverviewInfo">
+              <details class="c-atomicCustomisationMenu__details">
+                <summary class="c-atomicCustomisationMenu__summary">Change this styling</summary>
+                <h2 class="c-atomicCustomisationMenu__title">What would you like to change?</h2>
+                <ul>
+                  <li class="js-personalise_textSize">
+                    <details>
+                      <summary class="js-personaliseSummary">Font size</summary>
+                      <form>
+                        <fieldset>
+                          <legend>Select the text size you'd like</legend>
+                          <div>
+                            <input type="radio" id="productOverviewPersonalisations-textSize--small"
+                              class="js-individualPersonalisation" name="textSize" data-property="textSize--small">
+                            <label for="productOverviewPersonalisations-textSize--small">Small</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="productOverviewPersonalisations-textSize--medium"
+                              class="js-individualPersonalisation" name="textSize" data-property="textSize--medium">
+                            <label for="productOverviewPersonalisations-textSize--medium">Medium</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="productOverviewPersonalisations-textSize--large"
+                              class="js-individualPersonalisation" name="textSize" data-property="textSize--large">
+                            <label for="productOverviewPersonalisations-textSize--large">Large</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="productOverviewPersonalisations-textSize--xlarge"
+                              class="js-individualPersonalisation" name="textSize" data-property="textSize--xlarge">
+                            <label for="productOverviewPersonalisations-textSize--xlarge">Extra
+                              large </label>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </details>
+                  </li>
+                  <li class="js-personalise_letterSpacing">
+                    <details>
+                      <summary class="js-personaliseSummary">Letter spacing</summary>
+                      <form>
+                        <fieldset>
+                          <legend>Select the letter spacing size you'd like</legend>
+                          <div>
+                            <input type="radio" id="productOverviewPersonalisations-letterSpacing--small"
+                              class="js-individualPersonalisation" name="letterSpacing"
+                              data-property="letterSpacing--small">
+                            <label for="productOverviewPersonalisations-letterSpacing--small">Small</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="productOverviewPersonalisations-letterSpacing--medium"
+                              class="js-individualPersonalisation" name="letterSpacing"
+                              data-property="letterSpacing--medium">
+                            <label for="productOverviewPersonalisations-letterSpacing--medium">Medium</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="productOverviewPersonalisations-letterSpacing--large"
+                              class="js-individualPersonalisation" name="letterSpacing"
+                              data-property="letterSpacing--large">
+                            <label for="productOverviewPersonalisations-letterSpacing--large">Large</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="productOverviewPersonalisations-letterSpacing--xlarge"
+                              class="js-individualPersonalisation" name="letterSpacing"
+                              data-property="letterSpacing--xlarge">
+                            <label for="productOverviewPersonalisations-letterSpacing--xlarge">Extra
+                              large </label>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </details>
+                  </li>
+                  <li>
+                    <button class="[ c-atomicCustomisationMenu__reset ] [ js-clearIndividualPersonalisation ]"
+                      onclick="removeIndividualPersonalisation('p')">Reset
+                      styling</button>
+                  </li>
+                </ul>
+              </details>
+            </div>
+          </div>
         </div>
         <div class="c-itemHolder__options b-productOptions u-flow--medium">
           <h2>Product options</h2>
@@ -112,7 +193,7 @@
             </h3>
             <p class="b-showCase__copy">Meh - it's a bit better, but still - would anybody want 2 toilet rolls? I know I
               wouldn't.</p>
-            <p class="b-showCase__price"><span class="u-sr-only">Price of bundle </span>£11</p>
+            <p class="b-showCaserice"><span class="u-sr-only">Price of bundle </span>£11</p>
           </div>
           <div class="b-showCase u-flow--medium">
             <img class="b-showCase__image" src="/imgs/largeBundle.svg" alt="Stack of five bog rolls">
@@ -121,7 +202,7 @@
             </h3>
             <p class="b-showCase__copy">Holy cow - this is <strong>the bundle</strong>. Wow, the value is incredible and
               the style - so timeless!</p>
-            <p class="b-showCase__price"><span class="u-sr-only">Price of bundle </span>£50</p>
+            <p class="b-showCaserice"><span class="u-sr-only">Price of bundle </span>£50</p>
           </div>
         </div>
       </div>
@@ -132,21 +213,26 @@
           <figure class="b-reviews__singleReview u-flow--medium">
             <h3>Wish I'd gone large</h3>
             <blockquote>
-              <p>Wow! This product was great, my only regret is that wish I'd bought more and given more money to this <strong>fabulous</strong> corporation.</p>
+              <p>Wow! This product was great, my only regret is that wish I'd bought more and given more money to this
+                <strong>fabulous</strong> corporation.
+              </p>
             </blockquote>
             <figcaption><span aria-hidden="true">- </span>Loe Jamyman</figcaption>
           </figure>
           <figure class="b-reviews__singleReview u-flow--medium">
             <h3>Great for quality, not quantity</h3>
             <blockquote>
-              <p>This product is unbelievable, my favourite part is how they don't give back to the local community. Great for quality, not quantity. Would definitely recommend going large!</p>
+              <p>This product is unbelievable, my favourite part is how they don't give back to the local community.
+                Great for quality, not quantity. Would definitely recommend going large!</p>
             </blockquote>
             <figcaption><span aria-hidden="true">- </span>Paid User 384</figcaption>
           </figure>
           <figure class="b-reviews__singleReview u-flow--medium">
             <h3>It changed my view on the world</h3>
             <blockquote>
-              <p>Before I purchased this - I do not remember what I believed. This product has changed my view on the world and I really think that we should not hold massive corporations accountable and maybe let them do whatever they want.</p>
+              <p>Before I purchased this - I do not remember what I believed. This product has changed my view on the
+                world and I really think that we should not hold massive corporations accountable and maybe let them do
+                whatever they want.</p>
             </blockquote>
             <figcaption><span aria-hidden="true">- </span>Not a PR account</figcaption>
           </figure>
@@ -157,7 +243,8 @@
         <h2>Adverts</h2>
         <section class="b-hero" style="background-image: url(/imgs/advert.jpg);">
           <h3 class="b-hero__heading">Do you have incriminating personal documents?</h3>
-          <p class="b-hero__text">Pay us to take them away for you - we will recycle them with a business unrelated to Bog Roll Boutique!</p>
+          <p class="b-hero__text">Pay us to take them away for you - we will recycle them with a business unrelated to
+            Bog Roll Boutique!</p>
         </section>
       </div>
     </div>
@@ -170,5 +257,6 @@
 </body>
 
 <script src="/js/theme-switcher.js"></script>
+<script src="/js/styling-changes.js"></script>
 
 </html>
