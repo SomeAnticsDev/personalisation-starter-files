@@ -1,0 +1,31 @@
+.b-globalPersonalisation {
+  &__summary {
+    color: var(--color-text, #000);
+  }
+  &__summary, &__subSummary {
+    padding: 0.5rem 0.25rem;
+    &:hover {
+      background-color: var(--color-tertiary, #12252d);
+      color: var(--color-text-alt, #fff);
+      cursor: pointer;
+    }
+    &:active {
+      border: 0.2rem solid var(--color-quaternary, #008cc6);
+      background-color: var(--color-quaternary, #008cc6);
+      color: var(--color-text-alt, #fff);
+    }
+    &:focus {
+      border: 0.2rem solid var(--color-quaternary, #008cc6);
+      outline: none;
+    }
+  }
+  &__form {
+    background-color: var(--color-background, #fff);
+    color: var(--color-text, #000);
+    padding: 0.5rem 1rem;
+  }
+  &__heading {
+    font-size: var(--size-500);
+    max-width: 20ch;
+  }
+}

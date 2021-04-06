@@ -1,5 +1,5 @@
 .c-flexRow {
-  display: flex;
+  display: var(--display-flex, flex);
   flex-direction: row;
   justify-content: space-around;
 }

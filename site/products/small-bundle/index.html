@@ -81,17 +81,17 @@
           <h2>Product overview</h2>
           <div class="u-position--relative">
             <ul class="js-productOverviewInfo">
-              <li>Point 1</li>
-              <li>Point 2</li>
-              <li>Point 3</li>
-              <li>Point 4</li>
-              <li>Point 5</li>
+              <li>Quality toilet paper - hand crafted.</li>
+              <li>Recycled premium legal papers.</li>
+              <li>Not as good as the large bundle.</li>
+              <li>Still very good though.</li>
+              <li>Note: If you find any legal information on your toilet paper, please do not leak it to the press.</li>
             </ul>
             <!-- Container for the atomic/more granular personalisations -->
-            <div class="c-atomicCustomisationMenu" data-personalisation="js-productOverviewInfo">
-              <details class="c-atomicCustomisationMenu__details">
-                <summary class="c-atomicCustomisationMenu__summary">Change this styling</summary>
-                <h2 class="c-atomicCustomisationMenu__title">What would you like to change?</h2>
+            <div class="b-individualPersonalisationMenu" data-personalisation="js-productOverviewInfo">
+              <details class="b-individualPersonalisationMenu__details">
+                <summary class="b-individualPersonalisationMenu__summary">Change this styling</summary>
+                <h2 class="b-individualPersonalisationMenu__title">What would you like to change?</h2>
                 <ul>
                   <li class="js-personalise_textSize">
                     <details>
@@ -124,35 +124,35 @@
                       </form>
                     </details>
                   </li>
-                  <li class="js-personalise_letterSpacing">
+                  <li class="js-personalise_lineHeight">
                     <details>
-                      <summary class="js-personaliseSummary">Letter spacing</summary>
+                      <summary class="js-personaliseSummary">Line height</summary>
                       <form>
                         <fieldset>
-                          <legend>Select the letter spacing size you'd like</legend>
+                          <legend>Select the Line height size you'd like</legend>
                           <div>
-                            <input type="radio" id="productOverviewPersonalisations-letterSpacing--small"
-                              class="js-individualPersonalisation" name="letterSpacing"
-                              data-property="letterSpacing--small">
-                            <label for="productOverviewPersonalisations-letterSpacing--small">Small</label>
+                            <input type="radio" id="productOverviewPersonalisations-lineHeight--small"
+                              class="js-individualPersonalisation" name="lineHeight"
+                              data-property="lineHeight--small">
+                            <label for="productOverviewPersonalisations-lineHeight--small">Small</label>
                           </div>
                           <div>
-                            <input type="radio" id="productOverviewPersonalisations-letterSpacing--medium"
-                              class="js-individualPersonalisation" name="letterSpacing"
-                              data-property="letterSpacing--medium">
-                            <label for="productOverviewPersonalisations-letterSpacing--medium">Medium</label>
+                            <input type="radio" id="productOverviewPersonalisations-lineHeight--medium"
+                              class="js-individualPersonalisation" name="lineHeight"
+                              data-property="lineHeight--medium">
+                            <label for="productOverviewPersonalisations-lineHeight--medium">Medium</label>
                           </div>
                           <div>
-                            <input type="radio" id="productOverviewPersonalisations-letterSpacing--large"
-                              class="js-individualPersonalisation" name="letterSpacing"
-                              data-property="letterSpacing--large">
-                            <label for="productOverviewPersonalisations-letterSpacing--large">Large</label>
+                            <input type="radio" id="productOverviewPersonalisations-lineHeight--large"
+                              class="js-individualPersonalisation" name="lineHeight"
+                              data-property="lineHeight--large">
+                            <label for="productOverviewPersonalisations-lineHeight--large">Large</label>
                           </div>
                           <div>
-                            <input type="radio" id="productOverviewPersonalisations-letterSpacing--xlarge"
-                              class="js-individualPersonalisation" name="letterSpacing"
-                              data-property="letterSpacing--xlarge">
-                            <label for="productOverviewPersonalisations-letterSpacing--xlarge">Extra
+                            <input type="radio" id="productOverviewPersonalisations-lineHeight--xlarge"
+                              class="js-individualPersonalisation" name="lineHeight"
+                              data-property="lineHeight--xlarge">
+                            <label for="productOverviewPersonalisations-lineHeight--xlarge">Extra
                               large </label>
                           </div>
                         </fieldset>
@@ -160,8 +160,8 @@
                     </details>
                   </li>
                   <li>
-                    <button class="[ c-atomicCustomisationMenu__reset ] [ js-clearIndividualPersonalisation ]"
-                      onclick="removeIndividualPersonalisation('p')">Reset
+                    <button class="[ b-individualPersonalisationMenu__reset ] [ js-clearIndividualPersonalisation ]"
+                      onclick="removeIndividualPersonalisation('js-productOverviewInfo')">Reset
                       styling</button>
                   </li>
                 </ul>
@@ -175,10 +175,10 @@
           <button class="b-productOptions__wishlist">Add to wishlist</button>
           <h3>Share to social media</h3>
           <div class="b-socialMediaShare">
-            <button>Social media 1</button>
-            <button>Social media 2</button>
-            <button>Social media 3</button>
-            <button>Social media 4</button>
+            <button>Make Twitter Profile Picture</button>
+            <button>Email your CEO</button>
+            <button>Donate to our corporation</button>
+            <button>Use in your TokTik</button>
           </div>
         </div>
       </article>
@@ -253,10 +253,32 @@
   <footer class="footer c-wrapper u-flow--medium">
     <p class="footer__siteName">Bog Roll Boutique</p>
     <button class="b-button js-toggleThemeButton"></button>
+    <details class="b-globalPersonalisation">
+      <summary class="b-globalPersonalisation__summary">Styling options</summary>
+      <form class="b-globalPersonalisation__form u-flow--small">
+        <h2 class="b-globalPersonalisation__heading">What styling changes would you like to make?</h2>
+        <details class="b-globalPersonalisation__subDetails">
+          <summary class="b-globalPersonalisation__subSummary">Layout</summary>
+          <fieldset class="u-flow--small">
+            <legend>How would you prefer the layout?</legend>
+            <div>
+              <input id="globalPersonalisation-layout-structured" class="js-globalPersonalisation" data-classtoadd="layoutStructure--structured" type="radio" name="layoutStructure">
+              <label for="globalPersonalisation-layout-structured">Structured layout</label>
+            </div>
+            <div>
+              <input id="globalPersonalisation-layout-streamlined" class="js-globalPersonalisation" data-classtoadd="layoutStructure--streamlined" type="radio" name="layoutStructure">
+              <label for="globalPersonalisation-layout-streamlined">Streamlined layout</label>
+            </div>
+          </fieldset>
+        </details>
+        
+      </form>
+    </details>
   </footer>
 </body>
 
 <script src="/js/theme-switcher.js"></script>
-<script src="/js/styling-changes.js"></script>
+<script src="/js/individual-styling-changes.js"></script>
+<script src="/js/global-styling-changes.js"></script>
 
 </html>

@@ -98,9 +98,31 @@
   <footer class="footer c-wrapper u-flow--medium">
     <p class="footer__siteName">Bog Roll Boutique</p>
     <button class="b-button js-toggleThemeButton"></button>
+    <details class="b-globalPersonalisation">
+      <summary class="b-globalPersonalisation__summary">Styling options</summary>
+      <form class="b-globalPersonalisation__form u-flow--small">
+        <h2 class="b-globalPersonalisation__heading">What styling changes would you like to make?</h2>
+        <details class="b-globalPersonalisation__subDetails">
+          <summary class="b-globalPersonalisation__subSummary">Layout</summary>
+          <fieldset class="u-flow--small">
+            <legend>How would you prefer the layout?</legend>
+            <div>
+              <input id="globalPersonalisation-layout-structured" class="js-globalPersonalisation" data-classtoadd="layoutStructure--structured" type="radio" name="layoutStructure">
+              <label for="globalPersonalisation-layout-structured">Structured layout</label>
+            </div>
+            <div>
+              <input id="globalPersonalisation-layout-streamlined" class="js-globalPersonalisation" data-classtoadd="layoutStructure--streamlined" type="radio" name="layoutStructure">
+              <label for="globalPersonalisation-layout-streamlined">Streamlined layout</label>
+            </div>
+          </fieldset>
+        </details>
+      </form>
+    </details>
   </footer>
 </body>
 
 <script src="js/theme-switcher.js"></script>
+<script src="/js/individual-styling-changes.js"></script>
+<script src="/js/global-styling-changes.js"></script>
 
 </html>

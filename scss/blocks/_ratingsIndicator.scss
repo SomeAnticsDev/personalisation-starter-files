@@ -1,5 +1,5 @@
 .b-ratingsIndicator {
-  display: flex;
+  display: var(--display-flex, flex);
   flex-direction: row;
   align-items: center;
   &__graphic {
