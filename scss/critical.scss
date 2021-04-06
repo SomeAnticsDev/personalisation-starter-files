@@ -7,14 +7,14 @@ html {
   --size-400: 0.8rem;
 
   // Display properties
-  --display-grid: grid;
+//   --display-grid: grid;
   --display-flex: flex;
 }
 
 body {
   background-color: var(--color-background, white);
   margin: 0;
-  display: var(--display-grid, grid);
+  display: var(--layout-structure-grid, grid);
   min-height: 100vh;
   max-height: 100vh;
   grid-template-columns: auto 1fr;

@@ -1,12 +1,21 @@
 html {
   // Start by creating defaults
+  --layout-structure-grid: var(--layout-structure-grid-structured);
+  --layout-structure-flex: "";
 
   // Create structured properties
-
+  --layout-structure-grid-structured: "grid";
+  
   // Create streamlined properties
+  --layout-structure-grid-streamlined: "block";
 
   // Switch properties when the user has specifically selected structured layout
+  &.p-structured {
+	  --layout-structure-grid: var(--layout-structure-grid-structured);
+  }
 
   // Switch properties when the user has specifically selected streamlined layout
-
+  &.p-streamlined {
+	--layout-structure-grid: var(--layout-structure-grid-streamlined);
+}
 }

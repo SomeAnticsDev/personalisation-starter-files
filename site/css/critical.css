@@ -4,14 +4,13 @@ html {
   --size-600: 1.25rem;
   --size-500: 1rem;
   --size-400: 0.8rem;
-  --display-grid: grid;
   --display-flex: flex;
 }
 
 body {
   background-color: var(--color-background, white);
   margin: 0;
-  display: var(--display-grid, grid);
+  display: var(--layout-structure-grid, grid);
   min-height: 100vh;
   max-height: 100vh;
   grid-template-columns: auto 1fr;
@@ -101,7 +100,7 @@ fieldset {
 
 .c-itemHolder {
   grid-gap: 1rem;
-  display: var(--display-grid, grid);
+  display: var(--layout-structure-grid, grid);
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
   grid-template-areas: "productImage title productOptions" "productImage ratings productOptions" "productImage price productOptions" "productImage overview productOptions";
@@ -299,7 +298,7 @@ fieldset {
 }
 
 .b-socialMediaShare {
-  display: var(--display-grid, grid);
+  display: var(--layout-structure-grid, grid);
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 1em;
@@ -520,6 +519,19 @@ html.p-dark {
   --color-secondary: var(--color-secondary-dark);
   --color-tertiary: var(--color-tertiary-dark);
   --color-quaternary: var(--color-quaternary-dark);
+}
+
+html {
+  --layout-structure-grid: var(--layout-structure-grid-structured);
+  --layout-structure-flex: "";
+  --layout-structure-grid-structured: "grid";
+  --layout-structure-grid-streamlined: "block";
+}
+html.p-structured {
+  --layout-structure-grid: var(--layout-structure-grid-structured);
+}
+html.p-streamlined {
+  --layout-structure-grid: var(--layout-structure-grid-streamlined);
 }
 
 /*# sourceMappingURL=critical.css.map */

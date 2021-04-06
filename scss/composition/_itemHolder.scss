@@ -1,6 +1,6 @@
 .c-itemHolder {
   grid-gap: 1rem;
-  display: var(--display-grid, grid);
+  display: var(--layout-structure-grid, grid);
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
   grid-template-areas: "productImage title productOptions"
